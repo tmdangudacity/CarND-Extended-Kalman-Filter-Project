@@ -25,8 +25,10 @@ class KalmanFilter
         // measurement matrix radar (Jacobian)
         Eigen::MatrixXd H_radar_;
 
+
         // measurement covariance matrix laser
         Eigen::MatrixXd R_laser_;
+
 
         // measurement covariance matrix laser
         Eigen::MatrixXd R_radar_;
@@ -43,6 +45,7 @@ class KalmanFilter
 
         /**
         * Init Initializes Kalman filter
+
         * @param x_in Initial state
         * @param P_in Initial state covariance
         * @param F_in Transition matrix
@@ -70,6 +73,7 @@ class KalmanFilter
 
         /**
         * Updates the state by using standard Kalman Filter equations
+
         * @param z The measurement at k+1
         */
         void Update(const Eigen::VectorXd &z);
@@ -84,10 +88,6 @@ class KalmanFilter
 
         //Identity matrix
         Eigen::MatrixXd I_;
-
-
-
-
 };
 
 #endif /* KALMAN_FILTER_H_ */
